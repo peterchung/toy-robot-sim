@@ -1,19 +1,4 @@
-interface Actions {
-  rotate_left: string;
-  rotate_right: string;
-  move: string;
-}
-
-interface Position {
-  x: number;
-  y: number;
-}
-
-interface State {
-  position: Position;
-  direction: number;
-  boardSize: number;
-}
+import { State, Actions } from '@/lib/types';
 
 export const actions: Actions = {
   rotate_left: 'rotate_left',
