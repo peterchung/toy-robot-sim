@@ -23,8 +23,8 @@ export const listOfButtons: ButtonConfig[] = [
   },
   {
     type: 'Move',
-    action: 'move',
-    keyBind: 'Enter',
+    action: actions.move,
+    keyBind: 'ArrowUp',
   },
   {
     type: 'Right',
