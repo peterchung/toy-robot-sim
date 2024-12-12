@@ -4,6 +4,7 @@ export const actions = {
   rotate_left: 'rotate_left',
   rotate_right: 'rotate_right',
   move: 'move',
+  place: 'place',
 } as const;
 
 export const initialState: StateType = {
