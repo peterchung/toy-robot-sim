@@ -1,4 +1,5 @@
 import { StateType } from '@/lib/types';
+import { ButtonConfig } from '@/lib/types';
 
 export const actions = {
   rotate_left: 'rotate_left',
@@ -13,3 +14,21 @@ export const initialState: StateType = {
   boardSize: 5,
   totalMoves: 0,
 };
+
+export const listOfButtons: ButtonConfig[] = [
+  {
+    type: 'Left',
+    action: actions.rotate_left,
+    keyBind: 'ArrowLeft',
+  },
+  {
+    type: 'Move',
+    action: 'move',
+    keyBind: 'Enter',
+  },
+  {
+    type: 'Right',
+    action: actions.rotate_right,
+    keyBind: 'ArrowRight',
+  },
+];

@@ -4,25 +4,7 @@ import { Button } from "@/shadcn/ui/button"
 import { useContext, useEffect } from 'react'
 import { actions } from "../boardContext/boardConstants"
 import { BoardContext } from "../boardContext/BoardContext"
-import { ButtonConfig } from "@/lib/types"
-
-const listOfButtons: ButtonConfig[] = [
-  {
-    type: 'Left',
-    action: actions.rotate_left,
-    keyBind: 'ArrowLeft',
-  },
-  {
-    type: 'Move',
-    action: 'move',
-    keyBind: 'Enter',
-  },
-  {
-    type: 'Right',
-    action: actions.rotate_right,
-    keyBind: 'ArrowRight',
-  }
-]
+import { listOfButtons } from "../boardContext/boardConstants"
 
 export const CommandButtons = () => {
   const context = useContext(BoardContext);
