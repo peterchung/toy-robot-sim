@@ -7,7 +7,7 @@ export const actions = {
 } as const;
 
 export const initialState: StateType = {
-  position: { x: 0, y: 0 },
+  position: { x: 0, y: 4 },
   direction: 0,
   boardSize: 5,
 };
