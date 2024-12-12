@@ -6,7 +6,7 @@ export type ActionsType =
   | { type: 'rotate_left' }
   | { type: 'rotate_right' }
   | { type: 'move' }
-  | { type: 'place' };
+  | { type: 'place'; payload: { x: number; y: number } };
 
 interface PositionType {
   x: number;
@@ -19,6 +19,7 @@ export interface StateType {
   position: Position;
   direction: number;
   boardSize: number;
+  totalMoves: number;
 }
 
 export interface BoardContextType {
