@@ -2,7 +2,7 @@
 
 This is a frontend toy robot simulator application. In this application, users can move the robot within the grid and track the total number of times the robot has moved.
 
-Click this [link](placeholder) to view the deployed application. This application was deployed using Vercel.
+Click this [link](https://toy-robot-sim-aa7p.vercel.app/) to view the deployed application. This application was deployed using Vercel.
 
 ## Running in Development Mode
 
