@@ -13,6 +13,12 @@ Click this [link](placeholder) to view the deployed application. This applicatio
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Running Tests
+
+NOTE: Running npm test results in an error due to issues with Jest (via Babel) being unable to process the JSX syntax. Next.js recently upgraded to version 15.1.0, which is still in RC. Users have documented issues with using Jest in the latest version.
+
+- npm test
+
 ## About the Project
 
 [![Typescript][TS.js]][TS-url][![Next.js][Next.js]][Next-url][![React][React.js]][React-url][![Tailwind CSS][Tailwind CSS]][Tailwind-url]
