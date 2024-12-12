@@ -19,7 +19,7 @@ export const SimBoard = () => {
   return (
    <div>
     <div className="grid grid-cols-5 w-fit">
-      {board.map((row, y: number) => row.map((_, x: number) => (
+      {board.map((row, y: number) => row.map((_: null, x: number) => (
         <div
         key={`${x}-${y}`}
         onClick={() => dispatch({ type: actions.place, payload: { x, y}})}
