@@ -1,4 +1,5 @@
 // TODO: add action for placing robot in new cell
+import { Dispatch } from 'react';
 
 export interface Actions {
   rotate_left: string;
@@ -17,4 +18,9 @@ export interface State {
   position: Position;
   direction: number;
   boardSize: number;
+}
+
+export interface BoardContextType {
+  state: State;
+  dispatch: Dispatch<Actions>;
 }
