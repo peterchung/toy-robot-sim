@@ -37,10 +37,16 @@ export const boardReducer = (state: StateType, action: ActionsType) => {
           newPosition.x = Math.max(0, state.position.x - 1);
           break;
       }
+
+      const didPositionChange =
+        newPosition.x !== state.position.x ||
+        newPosition.y !== state.position.y;
+
       return {
         ...state,
         position: newPosition,
-        totalMoves: newTotalMoves + 1,
+        //increment totalMoves only if the position of the robot changed
+        totalMoves: didPositionChange ? newTotalMoves + 1 : state.totalMoves,
       };
     case actions.place:
       return {
