@@ -19,7 +19,7 @@ export const ReportButton = () => {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-      <Button variant='secondary' size='lg' className="border border-solid border-cyan-400">
+      <Button variant='secondary' size='lg' className="border border-solid border-black font-semibold">
       Report
     </Button>
       </DrawerTrigger>

@@ -39,7 +39,7 @@ export const CommandButtons = () => {
             dispatch({ type: button.action })
           
           }}
-          className="w-16">
+          className="w-16 font-semibold">
           {button.type}
         </Button>
       </div>
