@@ -5,7 +5,8 @@ import { Dispatch } from 'react';
 export type ActionsType =
   | { type: 'rotate_left' }
   | { type: 'rotate_right' }
-  | { type: 'move' };
+  | { type: 'move' }
+  | { type: 'place' };
 
 interface PositionType {
   x: number;
@@ -28,5 +29,5 @@ export interface BoardContextType {
 export type ButtonConfig = {
   type: string;
   action: keyof typeof actions;
-  keyBind?: string;
+  keyBind: string;
 };
