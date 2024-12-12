@@ -7,7 +7,7 @@ import { BoardProvider } from "./boardContext/BoardContext";
 export default function Home() {
   return (
     <BoardProvider>
-      <div className="h-screen flex flex-col items-center justify-evenly mt-10">
+      <div className="min-h-screen flex flex-col items-center gap-6 md:gap-12 lg:gap-16 py-10">
         <Instructions/>
         <SimBoard/>
         <CommandButtons/>
