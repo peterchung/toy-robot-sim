@@ -16,7 +16,7 @@ export const CommandButtons = () => {
   const { dispatch } = context;
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       listOfButtons.forEach((button) => {
         if (e.key === button.keyBind) {
           console.log(`dispatch ${button.type}`)
