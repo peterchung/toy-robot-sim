@@ -15,6 +15,7 @@ const listOfButtons: ButtonConfig[] = [
   {
     type: 'Move',
     action: 'move',
+    keyBind: 'Enter',
   },
   {
     type: 'Right',
