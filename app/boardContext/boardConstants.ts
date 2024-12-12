@@ -11,4 +11,5 @@ export const initialState: StateType = {
   position: { x: 0, y: 4 },
   direction: 0,
   boardSize: 5,
+  totalMoves: 0,
 };

@@ -18,6 +18,7 @@ export const boardReducer = (state: StateType, action: ActionsType) => {
     case actions.move:
       // Using Math.max/min in each case to prevent the robot from going off the grid
       const newPosition = { ...state.position };
+      const newTotalMoves = state.totalMoves;
       switch (state.direction) {
         // North
         case 0:
@@ -39,8 +40,14 @@ export const boardReducer = (state: StateType, action: ActionsType) => {
       return {
         ...state,
         position: newPosition,
+        totalMoves: newTotalMoves + 1,
       };
-
+    case actions.place:
+      return {
+        ...state,
+        position: action.payload,
+        totalMoves: 0,
+      };
     default:
       return state;
   }
