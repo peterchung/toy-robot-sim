@@ -1,7 +1,21 @@
+'use client'
+
 import { Button } from "@/shadcn/ui/button";
 import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription, DrawerFooter, DrawerClose } from "@/shadcn/ui/drawer";
+import { useContext } from "react";
+import { BoardContext } from "../boardContext/BoardContext";
+import { translateDirection } from "@/lib/utils";
 
 export const ReportButton = () => {
+  const context = useContext(BoardContext)
+
+  if (!context) {
+    throw new Error ('context is null or undefined')
+  }
+
+  const { state } = context
+  const currentDirection = translateDirection(state.direction)
+
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -13,7 +27,9 @@ export const ReportButton = () => {
         <div className="mx-auto">
           <DrawerHeader>
             <DrawerTitle>Robot Report</DrawerTitle>
-            <DrawerDescription>Placeholder for direction, location, total moves</DrawerDescription>
+            <DrawerDescription>Current direction: {currentDirection}</DrawerDescription>
+            <DrawerDescription>Current position: {`[${state.position.x}, ${state.position.y}]`}</DrawerDescription>
+            <DrawerDescription>Total move count: {state.totalMoves}</DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
             <DrawerClose asChild>
