@@ -1,20 +1,20 @@
 // TODO: add action for placing robot in new cell
+import { actions } from '@/app/boardContext/boardConstants';
 import { Dispatch } from 'react';
 
-export interface Actions {
-  rotate_left: string;
-  rotate_right: string;
-  move: string;
-}
+export type ActionsType =
+  | { type: 'rotate_left' }
+  | { type: 'rotate_right' }
+  | { type: 'move' };
 
-interface Position {
+interface PositionType {
   x: number;
   y: number;
 }
 
 // TODO: add totalMoves state
 
-export interface State {
+export interface StateType {
   position: Position;
   direction: number;
   boardSize: number;
@@ -22,5 +22,11 @@ export interface State {
 
 export interface BoardContextType {
   state: State;
-  dispatch: Dispatch<Actions>;
+  dispatch: Dispatch<ActionsType>;
 }
+
+export type ButtonConfig = {
+  type: string;
+  action: keyof typeof actions;
+  keyBind?: string;
+};
