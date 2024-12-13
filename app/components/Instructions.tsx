@@ -1,18 +1,12 @@
 import { Accordion, AccordionContent, AccordionTrigger, AccordionItem } from "@/shadcn/ui/accordion"
-
-const listOfInstructions = [
-  "1. Click on any cell to place the robot (note: placing the robot in a new cell will reset the total move count to 0)",
-  "2. Click the 'Move' button or press 'Up' arrow key to move the robot in the direction it's facing",
-  "3a. Click the 'Left/Right' buttons or use 'Left/Right' arrow keys to change the robot's direction",
-  "3b. Right rotates the direction 90deg clockwise. Left rotates the direction 90deg counter-clockwise",
-]
+import { listOfInstructions } from "../boardContext/boardConstants"
 
 export const Instructions = () => {
   return (
     <div className="mx-auto">
       <Accordion type='single' collapsible>
         <AccordionItem value='item-1'>
-        <AccordionTrigger className="font-extrabold text-lg px-10">INSTRUCTIONS:</AccordionTrigger>
+        <AccordionTrigger className="font-extrabold text-lg px-10 flex justify-center">INSTRUCTIONS:</AccordionTrigger>
         <AccordionContent>
           <ul className="px-10">
             {listOfInstructions.map((rule, idx) => (

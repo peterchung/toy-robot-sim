@@ -32,3 +32,10 @@ export const listOfButtons: ButtonConfig[] = [
     keyBind: 'ArrowRight',
   },
 ];
+
+export const listOfInstructions = [
+  '1. Click on any cell to place the robot (note: placing the robot in a new cell will reset the total move count to 0)',
+  "2. Click the 'Move' button or press 'Up' arrow key to move the robot in the direction it's facing",
+  "3a. Click the 'Left/Right' buttons or use 'Left/Right' arrow keys to change the robot's direction",
+  '3b. Right rotates the direction 90deg clockwise. Left rotates the direction 90deg counter-clockwise',
+];
