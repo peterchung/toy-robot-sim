@@ -5,7 +5,6 @@ import { useContext } from 'react';
 import { BoardContext } from '../boardContext/BoardContext';
 
 export const Robot = () => {
-  // TODO: import robot direction state and replace hardcode degree input
   const context = useContext(BoardContext);
 
   if (context === null) {

@@ -1,8 +1,6 @@
 import { actions } from './boardConstants';
 import { StateType, ActionsType } from '@/lib/types';
 
-// TODO: add case for moving robot and placing robot in new cell
-
 export const boardReducer = (state: StateType, action: ActionsType) => {
   switch (action.type) {
     case actions.rotate_left:

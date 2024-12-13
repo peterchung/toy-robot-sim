@@ -1,5 +1,4 @@
-// TODO: add action for placing robot in new cell
-import { actions } from '@/app/boardContext/boardConstants';
+import { actions } from '@/src/app/boardContext/boardConstants';
 import { Dispatch } from 'react';
 
 export type ActionsType =
@@ -12,8 +11,6 @@ interface PositionType {
   x: number;
   y: number;
 }
-
-// TODO: add totalMoves state
 
 export interface StateType {
   position: Position;
