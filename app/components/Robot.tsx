@@ -18,8 +18,8 @@ export const Robot = () => {
     className='flex flex-col items-center justify-center'
     style={{ transform: `rotate(${state.direction}deg)`}}
     >
-      <MoveUp />
-      <Bot />
+      <MoveUp className='stroke-cyan-400'/>
+      <Bot className='stroke-cyan-400'/>
     </div>
   )
 }

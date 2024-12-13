@@ -30,7 +30,7 @@ export const CommandButtons = () => {
   }, [dispatch])
   
   return (
-    <div className="w-60 flex justify-between">
+    <div className="w-40 md:w-80 flex justify-center gap-5">
       {listOfButtons.map((button) => (
       <div key={button.type}>
         <Button 
@@ -39,7 +39,9 @@ export const CommandButtons = () => {
             dispatch({ type: button.action } as ActionsType)
           
           }}
-          className="w-16 font-semibold">
+          variant='secondary'
+          className="w-12 md:w-20 font-semibold bg-cyan-400 text-black"
+        >
           {button.type}
         </Button>
       </div>

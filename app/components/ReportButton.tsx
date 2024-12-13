@@ -19,21 +19,23 @@ export const ReportButton = () => {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-      <Button variant='secondary' size='lg' className="border border-solid border-black font-semibold">
+      <Button variant='secondary' className="border border-solid border-cyan-400 font-semibold text-white bg-slate-800 w-16 md:w-32">
       Report
     </Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto">
           <DrawerHeader>
-            <DrawerTitle>Robot Report</DrawerTitle>
+            <DrawerTitle className="text-white">Robot Report</DrawerTitle>
             <DrawerDescription>Current direction: {currentDirection}</DrawerDescription>
             <DrawerDescription>Current position: {`[${state.position.x}, ${state.position.y}]`}</DrawerDescription>
             <DrawerDescription>Total move count: {state.totalMoves}</DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
             <DrawerClose asChild>
-              <Button size='sm'>Close</Button>
+              <div className="flex justify-center">
+              <Button className="border border-solid border-cyan-400 font-semibold text-white bg-slate-800 w-16 md:w-32">Close</Button>
+              </div>
             </DrawerClose>
           </DrawerFooter>
         </div>

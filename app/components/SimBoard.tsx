@@ -23,7 +23,7 @@ export const SimBoard = () => {
         <div
         key={`${x}-${y}`}
         onClick={() => dispatch({ type: actions.place, payload: { x, y}})}
-        className="min-w-12 min-h-12 md:w-20 md:h-20 flex items-center justify-center border border-gray-300 hover:cursor-pointer"
+        className="min-w-12 min-h-12 md:w-20 md:h-20 flex items-center justify-center border border-red-200 bg-slate-800 hover:cursor-pointer"
         >
           {state.position.x === x && state.position.y === y && <Robot/>}      
         </div>
