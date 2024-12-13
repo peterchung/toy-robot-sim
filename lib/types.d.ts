@@ -5,7 +5,7 @@ export type ActionsType =
   | { type: 'rotate_left' }
   | { type: 'rotate_right' }
   | { type: 'move' }
-  | { type: 'place'; payload?: { x: number; y: number } };
+  | { type: 'place'; payload: { x: number; y: number } };
 
 interface PositionType {
   x: number;

@@ -9,7 +9,7 @@ export enum actions {
 }
 
 export const initialState: StateType = {
-  position: { x: 0, y: 4 },
+  position: { x: 0, y: 0 },
   direction: 0,
   boardSize: 5,
   totalMoves: 0,

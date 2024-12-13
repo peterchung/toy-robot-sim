@@ -20,7 +20,7 @@ export const boardReducer = (state: StateType, action: ActionsType) => {
       switch (state.direction) {
         // North
         case 0:
-          newPosition.y = Math.max(0, state.position.y - 1);
+          newPosition.y = Math.min(state.boardSize - 1, state.position.y + 1);
           break;
         // East
         case 90:
@@ -28,7 +28,7 @@ export const boardReducer = (state: StateType, action: ActionsType) => {
           break;
         // South
         case 180:
-          newPosition.y = Math.min(state.boardSize - 1, state.position.y + 1);
+          newPosition.y = Math.max(0, state.position.y - 1);
           break;
         // West
         case 270:
@@ -49,7 +49,10 @@ export const boardReducer = (state: StateType, action: ActionsType) => {
     case actions.place:
       return {
         ...state,
-        position: action.payload,
+        position: {
+          ...action.payload,
+          y: state.boardSize - action.payload.y - 1,
+        },
         totalMoves: 0,
       };
     default:
