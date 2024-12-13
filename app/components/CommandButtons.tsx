@@ -2,9 +2,9 @@
 
 import { Button } from "@/shadcn/ui/button"
 import { useContext, useEffect } from 'react'
-import { actions } from "../boardContext/boardConstants"
 import { BoardContext } from "../boardContext/BoardContext"
 import { listOfButtons } from "../boardContext/boardConstants"
+import { ActionsType } from "@/lib/types"
 
 export const CommandButtons = () => {
   const context = useContext(BoardContext);
@@ -20,7 +20,7 @@ export const CommandButtons = () => {
       listOfButtons.forEach((button) => {
         if (e.key === button.keyBind) {
           console.log(`dispatch ${button.type}`)
-          dispatch({ type: actions[button.action]})
+          dispatch({ type: button.action} as ActionsType)
         }
       })
     }
@@ -36,7 +36,7 @@ export const CommandButtons = () => {
         <Button 
           onClick={() => {
             console.log(`${button.type} clicked!`)
-            dispatch({ type: button.action })
+            dispatch({ type: button.action } as ActionsType)
           
           }}
           className="w-16 font-semibold">
