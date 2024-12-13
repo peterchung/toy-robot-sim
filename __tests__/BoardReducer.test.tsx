@@ -14,7 +14,7 @@ describe('Board Reducer Movement Tests', () => {
   // Test state with robot at top edge
   const topEdgeState: StateType = {
     ...centralState,
-    position: { x: 2, y: 0 }
+    position: { x: 2, y: 4 }
   }
 
   // Test state with robot at right edge
@@ -27,7 +27,7 @@ describe('Board Reducer Movement Tests', () => {
   // Test state with robot at bottom edge
   const bottomEdgeState: StateType = {
     ...centralState,
-    position: { x: 2, y: 4 },
+    position: { x: 2, y: 0 },
     direction: 180
   }
 
@@ -43,7 +43,7 @@ describe('Board Reducer Movement Tests', () => {
       const action: ActionsType = { type: actions.move }
       const newState = boardReducer(topEdgeState, action)
       
-      expect(newState.position.y).toBe(0)
+      expect(newState.position.y).toBe(4)
       expect(newState.position.x).toBe(topEdgeState.position.x)
     })
 
@@ -59,7 +59,7 @@ describe('Board Reducer Movement Tests', () => {
       const action: ActionsType = { type: actions.move }
       const newState = boardReducer(bottomEdgeState, action)
       
-      expect(newState.position.y).toBe(4)
+      expect(newState.position.y).toBe(0)
       expect(newState.position.x).toBe(bottomEdgeState.position.x)
     })
 
@@ -112,7 +112,7 @@ describe('Board Reducer Movement Tests', () => {
       const action: ActionsType = { type: actions.move }
       const newState = boardReducer(northState, action)
       
-      expect(newState.position.y).toBe(northState.position.y - 1)
+      expect(newState.position.y).toBe(northState.position.y + 1)
       expect(newState.position.x).toBe(northState.position.x)
     })
 
@@ -130,7 +130,7 @@ describe('Board Reducer Movement Tests', () => {
       const action: ActionsType = { type: actions.move }
       const newState = boardReducer(southState, action)
       
-      expect(newState.position.y).toBe(southState.position.y + 1)
+      expect(newState.position.y).toBe(southState.position.y - 1)
       expect(newState.position.x).toBe(southState.position.x)
     })
 
