@@ -14,6 +14,6 @@ export const translateDirection = (direction: number) => {
     case 180:
       return 'South';
     case 270:
-      return 'West;';
+      return 'West';
   }
 };
