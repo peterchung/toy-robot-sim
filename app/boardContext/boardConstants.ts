@@ -1,12 +1,12 @@
 import { StateType } from '@/lib/types';
 import { ButtonConfig } from '@/lib/types';
 
-export const actions = {
-  rotate_left: 'rotate_left',
-  rotate_right: 'rotate_right',
-  move: 'move',
-  place: 'place',
-} as const;
+export enum actions {
+  rotate_left = 'rotate_left',
+  rotate_right = 'rotate_right',
+  move = 'move',
+  place = 'place',
+}
 
 export const initialState: StateType = {
   position: { x: 0, y: 4 },
